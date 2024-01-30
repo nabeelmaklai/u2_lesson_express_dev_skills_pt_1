@@ -7,9 +7,18 @@
 </head>
 <body>
   <h1>Dev Skills</h1>
+  <h3>Skills to learn as of <%= time %></h3>
   <ul>
    <!-- helped by Ali in this part -->
+   <a href="/devSkills/new">Add a new skill</a>
   <% devSkills.forEach(devSkills => { %>
+    <li>
+      <a href="/devSkills/<%= devSkills.id %>/edit">Edit</a>
+      <form action="/devSkills/<%= devSkills.id %>?_method=DELETE"
+        class="delete-form" method="POST">
+        <button type="submit">X</button>
+      </form>
+
     <a href="/devSkills/<%= devSkills.id %>"><%= devSkills.devSkills %></a>
      
   <% }); %>

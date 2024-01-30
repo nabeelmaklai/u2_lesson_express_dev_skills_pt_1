@@ -8,10 +8,6 @@
 
 // module.exports = router;
 
-
-
-
-
 var express = require('express')
 var router = express.Router()
 
@@ -19,6 +15,11 @@ var router = express.Router()
 var devSkillsCtrl = require('../controllers/devSkills')
 
 router.get('/', devSkillsCtrl.index)
-router.get('/:id', devSkillsCtrl.show);
+router.get('/new', devSkillsCtrl.new)
+router.get('/:id', devSkillsCtrl.show)
+router.post('/', devSkillsCtrl.create)
+router.get('/:id/edit', devSkillsCtrl.edit)
+router.delete('/:id', devSkillsCtrl.delete)
+router.put('/:id', devSkillsCtrl.update)
 
 module.exports = router
