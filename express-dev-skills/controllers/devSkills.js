@@ -1,5 +1,6 @@
 // controllers/todos.js
 const Dev = require('../models/devSkills')
+
 const index = (req, res) => {
   const devSkills = Dev.getAll()
   res.render('devSkills/index', {

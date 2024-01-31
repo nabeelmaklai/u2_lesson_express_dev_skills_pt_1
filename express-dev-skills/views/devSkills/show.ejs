@@ -1,4 +1,12 @@
 <body>
   <h3><%= Devs.devSkills %></h3>
+  <a href="/devSkills/<%= Devs.id %>/edit">Edit</a>
   <h3>Complete: <%= Devs.done ? 'Yes' : 'No' %></h3>
+  
+  <form action="/devSkills/<%= Devs.id %>?_method=DELETE"
+    class="delete-form" method="POST">
+    
+    <button type="submit">X</button>
+  </form>
+
 </body>
